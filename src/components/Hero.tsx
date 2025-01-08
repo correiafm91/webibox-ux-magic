@@ -63,20 +63,6 @@ export const Hero = () => {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1"
-          >
-            <div className="relative w-full max-w-lg mx-auto">
-              <img
-                src="/lovable-uploads/2526d1de-d3cd-4a3d-8aa5-75c55c2591be.png"
-                alt="Webibox Logo"
-                className="w-full h-auto animate-float"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
