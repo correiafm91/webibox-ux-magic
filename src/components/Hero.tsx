@@ -23,6 +23,23 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-900 to-blue-800">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/4ac2d23d-995d-44fd-a6e1-23dafb00c570.png"
+          alt="Background Illustration"
+          className="absolute top-0 left-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/8e599068-575d-458a-943b-33bf287de3d6.png"
+          alt="Background Illustration"
+          className="absolute top-1/4 right-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/b7174412-8fad-4c49-ac83-5bb82cec0349.png"
+          alt="Background Illustration"
+          className="absolute bottom-0 left-1/4 w-1/3 opacity-10"
+        />
+      </div>
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div 

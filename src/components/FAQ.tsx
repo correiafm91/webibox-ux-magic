@@ -27,7 +27,19 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-blue-50 to-white">
+    <section className="py-24 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/376b94c7-40ff-445e-8442-9c99117a597c.png"
+          alt="Background Illustration"
+          className="absolute top-1/4 right-0 w-1/3 opacity-10 transform rotate-180"
+        />
+        <img
+          src="/lovable-uploads/b421e3df-a663-4c1a-b7bc-7918f32773b9.png"
+          alt="Background Illustration"
+          className="absolute bottom-0 left-0 w-1/3 opacity-10 transform -rotate-45"
+        />
+      </div>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -2,7 +2,24 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/e07a2760-b8ad-49ea-8e00-3dbcd77c51d7.png"
+          alt="Background Illustration"
+          className="absolute top-0 left-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/9bb4d85f-8bec-457f-8486-b2c7546a8208.png"
+          alt="Background Illustration"
+          className="absolute top-1/4 right-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/4241f490-8a92-4263-aa54-6e005b379f04.png"
+          alt="Background Illustration"
+          className="absolute bottom-0 left-1/4 w-1/3 opacity-10"
+        />
+      </div>
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div
