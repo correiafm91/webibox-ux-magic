@@ -36,8 +36,25 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-24 bg-blue-50">
-      <div className="container px-4 mx-auto">
+    <section className="py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/376b94c7-40ff-445e-8442-9c99117a597c.png"
+          alt="Background Illustration"
+          className="absolute top-1/4 right-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/b421e3df-a663-4c1a-b7bc-7918f32773b9.png"
+          alt="Background Illustration"
+          className="absolute bottom-0 left-0 w-1/3 opacity-10"
+        />
+        <img
+          src="/lovable-uploads/8d60c0c4-12c6-4107-ae5d-72428f5ed5f5.png"
+          alt="Background Illustration"
+          className="absolute top-0 left-1/4 w-1/3 opacity-10"
+        />
+      </div>
+      <div className="container px-4 mx-auto relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +77,7 @@ export const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
             >
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6">
                 {feature.icon}
