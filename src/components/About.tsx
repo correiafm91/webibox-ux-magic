@@ -46,10 +46,13 @@ export const About = () => {
               Nossa História
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-900">
-              Transformando ideias em experiências digitais memoráveis
+              Transforme sua presença online com a Webibox
             </h2>
             <p className="text-blue-600 mb-6">
-              Somos uma equipe apaixonada por criar soluções digitais que não apenas impressionam visualmente, mas também geram resultados reais para nossos clientes. Nossa missão é transformar a presença digital dos nossos clientes através de designs inovadores e estratégias eficientes.
+              Na Webibox, criamos sites profissionais e impactantes, focados em uma experiência de usuário (UX) impecável, que não apenas encantam, mas também convertem. Nossa missão é garantir que cada visita ao seu site se transforme em seus clientes, com um design intuitivo e funcional, que guie seus leads para a conversão.
+            </p>
+            <p className="text-blue-600 mb-6">
+              Com soluções personalizadas e inovadoras, entregamos sites que não só impressionam, mas também geram resultados reais. A Webibox é o parceiro ideal para empreendedores quem busca resultados rápidos, com qualidade e foco na experiência do usuário, impulsionando suas vendas e tornando cada visita um passo mais próximo de fidelizar seu cliente.
             </p>
             <ul className="space-y-4">
               {[

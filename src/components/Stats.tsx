@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 const stats = [
   { value: 40, label: "Projetos Entregues" },
   { value: 90.3, label: "Clientes Satisfeitos" },
-  { value: 400000, label: "Lucros para Clientes" },
+  { value: 400.000, label: "Lucros para Clientes" },
+  { value: 3, label: "Anos de Experiência" },
 ];
 
 export const Stats = () => {
@@ -18,7 +19,7 @@ export const Stats = () => {
     <section ref={ref} className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
       <div className="container px-4 mx-auto relative z-10">
-        <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="grid md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
