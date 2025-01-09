@@ -51,28 +51,9 @@ export const About = () => {
             <p className="text-blue-600 mb-6">
               Na Webibox, criamos sites profissionais e impactantes, focados em uma experiência de usuário (UX) impecável, que não apenas encantam, mas também convertem. Nossa missão é garantir que cada visita ao seu site se transforme em seus clientes, com um design intuitivo e funcional, que guie seus leads para a conversão.
             </p>
-            <p className="text-blue-600 mb-6">
+            <p className="text-blue-600">
               Com soluções personalizadas e inovadoras, entregamos sites que não só impressionam, mas também geram resultados reais. A Webibox é o parceiro ideal para empreendedores quem busca resultados rápidos, com qualidade e foco na experiência do usuário, impulsionando suas vendas e tornando cada visita um passo mais próximo de fidelizar seu cliente.
             </p>
-            <ul className="space-y-4">
-              {[
-                "Design centrado no usuário",
-                "Tecnologia de ponta",
-                "Resultados mensuráveis",
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-2 h-2 bg-blue-600 rounded-full" />
-                  <span className="text-blue-700">{item}</span>
-                </motion.li>
-              ))}
-            </ul>
           </motion.div>
         </div>
       </div>
