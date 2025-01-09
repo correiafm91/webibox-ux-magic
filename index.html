@@ -1,21 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>webibox-ux-magic</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webibox - Transforme sua presença digital</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid white;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.active {
+            max-height: 500px;
+        }
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .stats-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <img src="https://i.postimg.cc/pTfgJpxR/Captura-de-tela-2025-01-08-132026.png" alt="Logotipo do Webibox" class="h-12">
+        <nav class="hidden md:flex space-x-8">
+            <a href="#benefits" class="hover:text-blue-200 transition-colors">Benefícios</a>
+            <a href="#about" class="hover:text-blue-200 transition-colors">Sobre</a>
+            <a href="#faq" class="hover:text-blue-200 transition-colors">Perguntas frequentes</a>
+        </nav>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-      </script>
-  </body>
-  <!-- Botão de Chat Flutuante -->
+    <!-- Seção Hero -->
+    <section class="container mx-auto px-4 py-20 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 typewriter">Webibox, muito mais do um site</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            Criamos sites profissionais, personalizados e focados na experiência do usuário. A Webibox é uma solução ideal para empreendedores que buscam um site que não apenas impressiona, mas converte e gera resultados reais.
+        </p>
+        <div class="mt-12">
+            <i data-lucide="chevron-down" class="w-8 h-8 mx-auto animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section id="benefits" class="container mx-auto px-4 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">O que você entregamos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-6"><i data-lucide="layout" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">UI (Interface do Usuário)</h3>
+                <p class="text-blue-100">Design moderno e intuitivo que cativa seus visitantes desde o primeiro momento. Criamos interfaces que não só impressionam visualmente, mas também guiam naturalmente seus usuários pela jornada de conversão.</p>
+            </div>
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-6"><i data-lucide="smile" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">UX (Experiência do Usuário)</h3>
+                <p class="text-blue-100">Navegação fluida e intuitiva que mantém seus visitantes engajados. Nossa abordagem centrada no usuário garante que cada interação seja significativa e conduza naturalmente à ação desejada.</p>
+            </div>
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="300">
+                <div class="mb-6"><i data-lucide="pen-tool" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Copywriting de Alta Conversão</h3>
+                <p class="text-blue-100">Textos estrategicamente elaborados que se conectam, convencem e convertem. Nossa equipe de redatores especialistas cria conteúdo que ressoa com seu público-alvo e impulsiona resultados mensuráveis.</p>
+            </div>
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="400">
+                <div class="mb-6"><i data-lucide="settings" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Personalização Sob Medida</h3>
+                <p class="text-blue-100">Cada projeto é único, assim como seu negócio. Desenvolvemos soluções personalizadas que atendem perfeitamente às suas necessidades específicas, garantindo que seu site seja realmente seu.</p>
+            </div>
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="500">
+                <div class="mb-6"><i data-lucide="dollar-sign" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Custo-Benefício Excepcional</h3>
+                <p class="text-blue-100">Investimento inteligente com retorno garantido. Oferecemos soluções premium a preços competitivos, garantindo que você obtenha o máximo valor para seu investimento em presença digital.</p>
+            </div>
+            <div class="benefit-card bg-blue-800 p-8 rounded-lg hover:bg-blue-700 transition-colors" data-aos="fade-up" data-aos-delay="600">
+                <div class="mb-6"><i data-lucide="zap" class="w-12 h-12"></i></div>
+                <h3 class="text-2xl font-bold mb-4">Otimização de Desempenho</h3>
+                <p class="text-blue-100">Sites rápidos e otimizados que garantem a melhor experiência para seus visitantes. Implementamos as melhores práticas de SEO e desempenho para maximizar sua visibilidade online.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="container mx-auto px-4 py-16" data-aos="fade-up">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="stats-card rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-bold mb-2"></h3>
+                <p class="text-4xl font-bold text-blue-300 stat-number" data-target="40">0</p>
+                <p class="text-sm text-blue-200 mt-2">projetos entregues</p>
+            </div>
+            <div class="stats-card rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-bold mb-2"></h3>
+                <p class="text-4xl font-bold text-blue-300 stat-number" data-target="37">0</p>
+                <p class="text-sm text-blue-200 mt-2">dos clientes satisfeitos</p>
+            </div>
+            <div class="stats-card rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-2xl font-bold mb-2"></h3>
+                <p class="text-4xl font-bold text-blue-300 stat-number" data-target="400000">0</p>
+                <p class="text-sm text-blue-100 mt-2">De lucros para nossos clientes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="container mx-auto px-4 py-20" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Sobre a Webibox</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Na Webibox, criamos sites profissionais e impactantes, focados em uma experiência de usuário (UX) impecável, que não apenas encantam, mas também convertem. Nossa missão é garantir que cada visita ao seu site se transforme em clientes, com um design intuitivo e funcional, que guie seus leads para a conversão. Com soluções personalizadas e inovadoras, entregamos sites que não só impressionam, mas também geram resultados reais. A Webibox é o parceiro ideal para empreendedores que buscam resultados rápidos, com qualidade e foco na experiência do usuário, impulsionando suas vendas e tornando cada visita um passo mais próximo de fidelizar seu cliente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção de Perguntas Frequentes -->
+    <section id="faq" class="container mx-auto px-4 py-20" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas frequentes</h2>
+        <div class="max-w-3xl mx-auto space-y-4">
+            <div class="bg-blue-800/50 rounded-lg p-4" data-aos="fade-up" data-aos-delay="100">
+                <button class="faq-button w-full flex justify-between items-center">
+                    <span class="text-xl font-semibold">O que é um protótipo?</span>
+                    <i data-lucide="plus" class="transform transition-transform"></i>
+                </button>
+                <div class="faq-answer mt-4">
+                    <p class="text-blue-100">Um protótipo é uma versão inicial do seu site, que permite visualizar e testar a estrutura, design e funcionalidades antes do lançamento oficial.</p>
+                </div>
+           
+            </div>
+            <div class="bg-blue-800/50 rounded-lg p-4" data-aos="fade-up" data-aos-delay="300">
+                <button class="faq-button w-full flex justify-between items-center">
+                    <span class="text-xl font-semibold">Como contratar o serviço?</span>
+                    <i data-lucide="plus" class="transform transition-transform"></i>
+                </button>
+                <div class="faq-answer mt-4">
+                    <p class="text-blue-100">Contratar é simples! Basta entrar em contato com o nosso chatbot no ícone de robô ao lado direito, enviar suas informações e em até 24 horas um humano entrará em contato com você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-blue-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <img src="https://i.postimg.cc/pTfgJpxR/Captura-de-tela-2025-01-08-132026.png" alt="Logotipo Webibox" class="h-12 mb-6 md:mb-0">
+                <div class="flex space-x-8">
+                    <a href="#benefits" class="hover:text-blue-200 transition-colors">Benefícios</a>
+                    <a href="#about" class="hover:text-blue-200 transition-colors">Sobre</a>
+                    <a href="#faq" class="hover:text-blue-200 transition-colors">FAQ</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-blue-200">© <span id="current-year"></span> Webibox. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar AOS
+        AOS.init({ duration: 1000, once: true, offset: 100 });
+
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+
+        // Documento de funcionalidade de FAQ
+        document.querySelectorAll('.faq-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('[data-lucide="plus"]');
+                answer.classList.toggle('active');
+                icon.style.transform = answer.classList.contains('active') ? 'rotate(45deg)' : 'rotate(0deg)';
+            });
+        });
+
+        // Função de estatísticas animadas
+        function animateValue(element, start, end, duration) {
+            const range = end - start;
+            const increment = range / (duration * 60);
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.round(current).toLocaleString('pt-BR');
+            }, 1000 / 60);
+        }
+
+        // Animar estatísticas quando elas aparecem na visualização
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateValue(entry.target, 0, target, 2);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // Definir o ano atual no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Rolagem suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+<!-- Botão de Chat Flutuante -->
 <div class="chat-button" onclick="toggleChat()">
   <img src="https://i.postimg.cc/ht2QNmzC/3-D-chatbot-illustration-removebg-preview.png" alt="Chatbot">
 </div>
@@ -108,4 +336,5 @@
     chatContainer.classList.toggle('open');
   }
 </script>
-</html>
+
+  </html>
