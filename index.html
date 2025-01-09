@@ -14,16 +14,99 @@
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-  
-  <body>
-    <!-- Widget Env Script -->
-    <script>
-      window.Widget = {
-        AgentURL: "https://platform.zaia.app/embed/chat/19948",
-      };
-    </script>
-    <!-- Widget Loader Script -->
-    <script src="https://platform.zaia.app/script/widget-loader.js"></script>
-  </body>
+<!-- Botão de Chat Flutuante -->
+<div class="chat-button" onclick="toggleChat()">
+  <img src="https://i.postimg.cc/ht2QNmzC/3-D-chatbot-illustration-removebg-preview.png" alt="Chatbot">
+</div>
+
+<!-- Contêiner do Widget de Chat -->
+<div id="chat-container" class="chat-widget-container"></div>
+
+<style>
+  /* Estilo do botão de chat */
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: vibrate 4s infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+  }
+
+  .chat-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .chat-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  /* Animação de vibração suave */
+  @keyframes vibrate {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    75% {
+      transform: translateX(-2px);
+    }
+  }
+
+  /* Contêiner do widget de chat */
+  .chat-widget-container {
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 999;
+  }
+
+  .chat-widget-container.open {
+    display: block;
+  }
+</style>
+
+<script>
+  // Alterna o estado de abertura/fechamento do widget
+  function toggleChat() {
+    const chatContainer = document.getElementById('chat-container');
+
+    // Adiciona o iframe ao abrir o chat
+    if (!chatContainer.classList.contains('open')) {
+      chatContainer.innerHTML = `
+        <iframe 
+          id="widget-iframe"
+          src="https://platform.zaia.app/embed/chat/19948"
+          style="border: none; width: 100%; height: 100%; border-radius: 20px;">
+        </iframe>
+      `;
+    }
+
+    chatContainer.classList.toggle('open');
+  }
+</script>
+
 
 </html>
