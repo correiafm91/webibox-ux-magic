@@ -15,8 +15,9 @@ export const Stats = () => {
   });
 
   return (
-    <section ref={ref} className="py-24 bg-primary text-white">
-      <div className="container px-4 mx-auto">
+    <section ref={ref} className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+      <div className="container px-4 mx-auto relative z-10">
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {stats.map((stat, index) => (
             <motion.div
@@ -24,8 +25,9 @@ export const Stats = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="p-8 rounded-2xl bg-white/50 backdrop-blur-sm border border-blue-100/20 shadow-xl"
             >
-              <div className="text-4xl md:text-5xl font-bold mb-2">
+              <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                 {inView ? (
                   <Counter from={0} to={stat.value} duration={2} />
                 ) : (
@@ -33,7 +35,7 @@ export const Stats = () => {
                 )}
                 {index === 1 && "%"}
               </div>
-              <p className="text-primary-foreground/80">{stat.label}</p>
+              <p className="text-blue-600/80 font-medium">{stat.label}</p>
             </motion.div>
           ))}
         </div>
