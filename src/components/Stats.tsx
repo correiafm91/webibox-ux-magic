@@ -3,9 +3,9 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 
 const stats = [
-  { value: 150, label: "Projetos Entregues" },
-  { value: 98, label: "Clientes Satisfeitos" },
-  { value: 5, label: "Anos de Experiência" },
+  { value: 40, label: "Projetos Entregues" },
+  { value: 90.3, label: "Clientes Satisfeitos" },
+  { value: 400000, label: "Lucros para Clientes" },
 ];
 
 export const Stats = () => {
@@ -34,6 +34,7 @@ export const Stats = () => {
                   "0"
                 )}
                 {index === 1 && "%"}
+                {index === 2 && "R$"}
               </div>
               <p className="text-blue-600/80 font-medium">{stat.label}</p>
             </motion.div>
