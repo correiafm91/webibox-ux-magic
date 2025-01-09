@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const stats = [
   { value: 40, label: "Projetos Entregues" },
   { value: 90.3, label: "Clientes Satisfeitos" },
-  { value: 400.000, label: "Lucros para Clientes" },
+  { value: 400000, label: "Lucros para Clientes" },
   { value: 3, label: "Anos de Experiência" },
 ];
 
@@ -68,5 +68,5 @@ const Counter = ({ from, to, duration }: { from: number; to: number; duration: n
     return () => clearInterval(timer);
   }, [from, to, duration]);
 
-  return <>{count}</>;
+  return <>{count.toLocaleString('pt-BR')}</>;
 };
