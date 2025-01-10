@@ -41,14 +41,36 @@ export const Hero = () => {
     }
   };
 
-  const floatingAnimation = {
-    y: [-10, 10],
-    x: [-5, 5],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      repeatType: "reverse",
-      ease: "easeInOut"
+  const floatingVariants = {
+    animate1: {
+      y: [-3, 3],
+      x: [-2, 2],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }
+    },
+    animate2: {
+      y: [3, -3],
+      x: [2, -2],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }
+    },
+    animate3: {
+      y: [-2, 2],
+      x: [-1, 1],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }
     }
   };
 
@@ -56,10 +78,11 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-900 to-blue-800">
       <div className="absolute inset-0 z-0">
         <motion.img
-          animate={{
-            ...floatingAnimation,
+          variants={floatingVariants}
+          animate="animate1"
+          style={{
             scale: isHovered ? 1.1 : 1,
-            opacity: isHovered ? 0.15 : 0.1
+            opacity: isHovered ? 0.08 : 0.05
           }}
           transition={{ duration: 0.5 }}
           src="/lovable-uploads/4ac2d23d-995d-44fd-a6e1-23dafb00c570.png"
@@ -67,12 +90,11 @@ export const Hero = () => {
           className="absolute top-0 left-0 w-1/3"
         />
         <motion.img
-          animate={{
-            ...floatingAnimation,
+          variants={floatingVariants}
+          animate="animate2"
+          style={{
             scale: isHovered ? 1.1 : 1,
-            opacity: isHovered ? 0.15 : 0.1,
-            y: [10, -10], // Opposite direction for variety
-            x: [5, -5]
+            opacity: isHovered ? 0.08 : 0.05
           }}
           transition={{ duration: 0.5 }}
           src="/lovable-uploads/8e599068-575d-458a-943b-33bf287de3d6.png"
@@ -80,12 +102,11 @@ export const Hero = () => {
           className="absolute top-1/4 right-0 w-1/3"
         />
         <motion.img
-          animate={{
-            ...floatingAnimation,
+          variants={floatingVariants}
+          animate="animate3"
+          style={{
             scale: isHovered ? 1.1 : 1,
-            opacity: isHovered ? 0.15 : 0.1,
-            y: [-5, 5], // Different range for variety
-            x: [-3, 3]
+            opacity: isHovered ? 0.08 : 0.05
           }}
           transition={{ duration: 0.5 }}
           src="/lovable-uploads/b7174412-8fad-4c49-ac83-5bb82cec0349.png"
