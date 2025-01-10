@@ -8,20 +8,16 @@ import {
 
 const faqs = [
   {
-    question: "Como funciona o processo de criação do site?",
-    answer: "Iniciamos com uma análise detalhada do seu negócio, criamos protótipos para sua aprovação e desenvolvemos seu site com atualizações constantes durante o processo.",
-  },
-  {
-    question: "Quanto tempo leva para criar um site personalizado?",
-    answer: "O prazo varia de acordo com a complexidade do projeto, mas geralmente entregamos sites completos em 4-6 semanas.",
+    question: "O que é um protótipo?",
+    answer: "Um protótipo é uma versão inicial do seu site, que permite visualizar e testar a estrutura, design e funcionalidades antes do lançamento oficial.",
   },
   {
     question: "Como posso personalizar meu site?",
-    answer: "Oferecemos personalização completa, desde o design até as funcionalidades. Adaptamos cada elemento para refletir sua marca e atender suas necessidades específicas.",
+    answer: "A personalização é totalmente flexível! Escolha funcionalidades e ferramentas conforme a necessidade da sua marca. Abaixo do site, adicione uma calculadora que ajusta o preço conforme as opções selecionadas.",
   },
   {
-    question: "Como contratar os serviços da Webibox?",
-    answer: "Entre em contato conosco através do formulário no site ou por telefone. Faremos uma reunião inicial para entender suas necessidades e apresentar a melhor solução.",
+    question: "Como contratar o serviço?",
+    answer: "Contratar é simples! Preencha o formulário de contato e nossa equipe entrará em contato com você.",
   },
 ];
 
