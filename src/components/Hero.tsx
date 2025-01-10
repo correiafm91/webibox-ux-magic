@@ -41,11 +41,23 @@ export const Hero = () => {
     }
   };
 
+  const floatingAnimation = {
+    y: [-10, 10],
+    x: [-5, 5],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "easeInOut"
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-900 to-blue-800">
       <div className="absolute inset-0 z-0">
         <motion.img
           animate={{
+            ...floatingAnimation,
             scale: isHovered ? 1.1 : 1,
             opacity: isHovered ? 0.15 : 0.1
           }}
@@ -56,8 +68,11 @@ export const Hero = () => {
         />
         <motion.img
           animate={{
+            ...floatingAnimation,
             scale: isHovered ? 1.1 : 1,
-            opacity: isHovered ? 0.15 : 0.1
+            opacity: isHovered ? 0.15 : 0.1,
+            y: [10, -10], // Opposite direction for variety
+            x: [5, -5]
           }}
           transition={{ duration: 0.5 }}
           src="/lovable-uploads/8e599068-575d-458a-943b-33bf287de3d6.png"
@@ -66,8 +81,11 @@ export const Hero = () => {
         />
         <motion.img
           animate={{
+            ...floatingAnimation,
             scale: isHovered ? 1.1 : 1,
-            opacity: isHovered ? 0.15 : 0.1
+            opacity: isHovered ? 0.15 : 0.1,
+            y: [-5, 5], // Different range for variety
+            x: [-3, 3]
           }}
           transition={{ duration: 0.5 }}
           src="/lovable-uploads/b7174412-8fad-4c49-ac83-5bb82cec0349.png"
