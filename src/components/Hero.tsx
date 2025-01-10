@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -58,10 +56,6 @@ export const Hero = () => {
             <p className="text-lg text-blue-100 mb-8 max-w-lg mx-auto lg:mx-0">
               Criamos sites profissionais, personalizados e focados na experiência do usuário. A Webibox é uma solução ideal para empreendedores que buscam um site que não apenas impressiona, mas converte e gera resultados reais.
             </p>
-            <Button size="lg" className="group bg-white text-blue-900 hover:bg-blue-50">
-              Comece agora
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
           </motion.div>
         </div>
       </div>

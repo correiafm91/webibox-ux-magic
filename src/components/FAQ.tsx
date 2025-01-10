@@ -12,10 +12,6 @@ const faqs = [
     answer: "Um protótipo é uma versão inicial do seu site, que permite visualizar e testar a estrutura, design e funcionalidades antes do lançamento oficial.",
   },
   {
-    question: "Como posso personalizar meu site?",
-    answer: "A personalização é totalmente flexível! Escolha funcionalidades e ferramentas conforme a necessidade da sua marca. Abaixo do site, adicione uma calculadora que ajusta o preço conforme as opções selecionadas.",
-  },
-  {
     question: "Como contratar o serviço?",
     answer: "Contratar é simples! Preencha o formulário de contato e nossa equipe entrará em contato com você.",
   },
@@ -66,7 +62,14 @@ export const FAQ = () => {
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-blue-600">
-                    {faq.answer}
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {faq.answer}
+                    </motion.div>
                   </AccordionContent>
                 </AccordionItem>
               </motion.div>
