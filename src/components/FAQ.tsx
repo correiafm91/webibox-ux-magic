@@ -63,7 +63,10 @@ export const FAQ = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <AccordionItem value={`item-${index}`} className="border rounded-lg bg-white shadow-sm">
+                <AccordionItem 
+                  value={`item-${index}`} 
+                  className="border rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
                   <AccordionTrigger className="px-6 py-4 text-left text-blue-900 hover:text-blue-700 hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
