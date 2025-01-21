@@ -48,7 +48,7 @@ export const Hero = () => {
       transition: {
         duration: 8,
         repeat: Infinity,
-        repeatType: "reverse",
+        repeatType: "reverse" as const,
         ease: "easeInOut"
       }
     },
@@ -58,7 +58,7 @@ export const Hero = () => {
       transition: {
         duration: 8,
         repeat: Infinity,
-        repeatType: "reverse",
+        repeatType: "reverse" as const,
         ease: "easeInOut"
       }
     },
@@ -68,7 +68,7 @@ export const Hero = () => {
       transition: {
         duration: 8,
         repeat: Infinity,
-        repeatType: "reverse",
+        repeatType: "reverse" as const,
         ease: "easeInOut"
       }
     }
